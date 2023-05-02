@@ -6,17 +6,21 @@ print(id)
 print("\nBem-vindo a Lanchonete Ívyne Ripardo\n")
 
 #Menu
-print("----------------Cardápio--------------------")
-print("Código |        Descrição      | Valor(R$")
-print("   100 |     Cachorro-Quente   | 9,00")
-print("   101 | Cachorro-Quente Duplo | 11,00")
-print("   102 |         X-Egg         | 12,00")
-print("   103 |         X-Salada      | 13,00")
-print("   104 |         X-Bacon       | 14,00")
-print("   105 |         X-Tudo        | 17,00")
-print("   200 |   Refrigerante Lata   | 5,00")
-print("   201 |       Chá Gelado      | 4,00")
-print("--------------------------------------------")
+
+def menu():
+  print("\n----------------Cardápio--------------------")
+  print("Código |        Descrição      | Valor(R$")
+  print("   100 |     Cachorro-Quente   | 9,00")
+  print("   101 | Cachorro-Quente Duplo | 11,00")
+  print("   102 |         X-Egg         | 12,00")
+  print("   103 |         X-Salada      | 13,00")
+  print("   104 |         X-Bacon       | 14,00")
+  print("   105 |         X-Tudo        | 17,00")
+  print("   200 |   Refrigerante Lata   | 5,00")
+  print("   201 |       Chá Gelado      | 4,00")
+  print("--------------------------------------------\n")
+
+menu()
 
 #Entrada do código do pedido
 preco = 0 #Acumulador do preço total
@@ -26,6 +30,7 @@ while True:
   cod = int(input("Entre com o código do produto desejado:\n"))
   if (cod != 100 and cod != 101 and cod != 102 and cod != 103 and cod != 104 and cod != 105 and cod != 200 and cod != 201):
     print("\nOpção Inválida!!!\n")
+    menu()
     continue
 #Verificando qual o produto e o valor através do código
   if (cod == 100):
@@ -56,6 +61,7 @@ while True:
 #Saída
   ped = input("\nDeseja pedir mais alguma coisa?\n Digite: \n s = Sim \n n = Não\n")
   if (ped == "s"):
+    menu()
     continue
   else:
     print("----------- NOTA FISCAL -----------")
