@@ -17,7 +17,7 @@ if(qnt <= 9):
   desc = 0
 elif(10 <= qnt <= 99 ):
   perc = 5
-  desc = 0.5
+  desc = 0.05
 elif(100<= qnt <= 999):
   perc = 10
   desc = 0.10
